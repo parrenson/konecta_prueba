@@ -2,21 +2,21 @@
 
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link {{ request()->is('home')? 'active': ''}}" href="{{URL::route('home')}}" data-toggle="tooltip" title="Inicio">
+            <a class="nav-link {{ request()->is('/')? 'active': ''}}" href="{{URL::route('/')}}" data-toggle="tooltip" title="Inicio">
                 <i class="fas fa-home fa-lg"></i>
-                <span>Inicio</span>
+                <span class="ml-2">Inicio</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link {{ request()->is('inventarios')? 'active': ''}}" href="{{URL::route('inventarios')}}" data-toggle="tooltip" title="Inventarios">
                 <i class="fas fa-clipboard-list"></i>
-                <span>Inventarios</span>
+                <span class="ml-2">Inventarios</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link {{ request()->is('ventas')? 'active': ''}}" href="{{URL::route('ventas')}}" data-toggle="tooltip" title="Ventas">
                 <i class="fas fa-store-alt"></i>
-                <span>Ventas</span>
+                <span class="ml-2">Ventas</span>
             </a>
         </li>
     </ul>

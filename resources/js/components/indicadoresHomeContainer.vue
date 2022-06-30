@@ -11,7 +11,7 @@
                                 Producto Más Vendido
                             </div>
                             <div class="h5 mb-0 font-weight-bold">
-                                344
+                                0
                             </div>
                         </div>
                         <div class="col-auto">
@@ -32,7 +32,7 @@
                                 Stock Cantidad
                             </div>
                             <div class="h5 mb-0 font-weight-bold">
-                                344
+                                0
                             </div>
                         </div>
                         <div class="col-auto">

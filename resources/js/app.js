@@ -22,20 +22,31 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 Vue.component('indicadores-home', require('./components/indicadoresHomeContainer.vue').default);
 Vue.component('inventarios-list', require('./components/inventariosContainer.vue').default);
+Vue.component('ventas-list', require('./components/ventasContainer.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
- import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
- import 'bootstrap/dist/css/bootstrap.css'
  import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+ 
+ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
  Vue.use(BootstrapVue)
  Vue.use(IconsPlugin)
 
+ Vue.component('clip-loader', require('vue-spinner/src/ClipLoader.vue').default);
+
+ import VueSweetalert2 from 'vue-sweetalert2';
+ import 'sweetalert2/dist/sweetalert2.min.css';
+ Vue.use(VueSweetalert2);
+
+ import Vuelidate from 'vuelidate';
+ Vue.use(Vuelidate);
+
+ import { store } from 'store/main-store';
+
  const app = new Vue({
+    store,
     el: '#wrapper',
 });

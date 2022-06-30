@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('/');
 Route::get('inventarios', 'HomeController@inventarios')->name('inventarios');
-Route::get('ventas', 'HomeController@index')->name('ventas');
+Route::get('ventas', 'HomeController@ventas')->name('ventas');
+Route::post('create_inventario', 'HomeController@create_inventario');
+Route::post('delete_inventario/{id}', 'HomeController@delete_inventario');
+Route::post('edit_inventario', 'HomeController@edit_inventario');
+Route::post('search_producto', 'HomeController@search_producto');
+Route::post('create_venta', 'HomeController@create_venta');
 
