@@ -4,10 +4,9 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+ require('./bootstrap');
 
-window.Vue = require('vue').default;
-
+ window.Vue = require('vue').default;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -21,12 +20,22 @@ window.Vue = require('vue').default;
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+Vue.component('indicadores-home', require('./components/indicadoresHomeContainer.vue').default);
+Vue.component('inventarios-list', require('./components/inventariosContainer.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-const app = new Vue({
-    el: '#app',
+ import 'bootstrap/dist/css/bootstrap.css'
+ import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+ Vue.use(BootstrapVue)
+ Vue.use(IconsPlugin)
+
+ const app = new Vue({
+    el: '#wrapper',
 });
